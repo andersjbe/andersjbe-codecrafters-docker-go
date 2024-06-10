@@ -8,7 +8,6 @@ import (
 
 // Usage: your_docker.sh run <image> <command> <arg1> <arg2> ...
 func main() {
-
 	command := os.Args[3]
 	args := os.Args[4:len(os.Args)]
 
@@ -19,5 +18,5 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Println(string(output))
+	fmt.Println(string(output)[:len(output)-1])
 }
